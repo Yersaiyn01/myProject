@@ -1,0 +1,322 @@
+.onboarding-shell {
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(160deg, #071a07 0%, #0a2e0a 40%, #0d3d0d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+@scope (.onboarding-shell) {
+  .onboarding {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .steps-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .step {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s;
+  }
+
+  .step.active {
+    background: #00cc55;
+    border-color: #00cc55;
+    color: white;
+  }
+
+  .step.done {
+    background: #008833;
+    border-color: #008833;
+    color: white;
+  }
+
+  .step-line {
+    width: 60px;
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+  }
+
+  .step-line.done {
+    background: #008833;
+  }
+
+  .step-card {
+    width: 100%;
+    background: #111e11;
+    border-radius: 20px;
+    padding: 2.5rem;
+    border: 1px solid rgba(0,255,136,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .step-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin: 0;
+  }
+
+  .step-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    margin: 0;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .custom-goal-input {
+    margin-top: 1rem;
+  }
+
+  .input-group label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+  }
+
+  .amount-input {
+    display: flex;
+    align-items: center;
+    background: #0d150d;
+    border: 1px solid rgba(0,255,136,0.2);
+    border-radius: 12px;
+    padding: 0 16px;
+    transition: border-color 0.2s;
+  }
+
+  .amount-input:focus-within {
+    border-color: #00cc55;
+  }
+
+  .currency {
+    font-size: 20px;
+    color: #00cc55;
+    font-weight: 700;
+    padding-right: 10px;
+  }
+
+  .big-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 14px 0;
+  }
+
+  .big-input::placeholder {
+    color: rgba(255,255,255,0.2);
+  }
+
+  .text-input {
+    background: #0d150d;
+    border: 1px solid rgba(0,255,136,0.2);
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .text-input:focus {
+    border-color: #00cc55;
+  }
+
+  .currency-options,
+  .date-options {
+    display: flex;
+    gap: 10px;
+  }
+
+  .cur-btn {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px;
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .cur-btn:hover {
+    background: rgba(255,255,255,0.08);
+  }
+
+  .cur-btn.active {
+    background: rgba(0,204,85,0.15);
+    border-color: #00cc55;
+    color: #00cc55;
+    font-weight: 600;
+  }
+
+  .dream-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .dream-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 14px 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s;
+  }
+
+  .dream-card:hover {
+    background: rgba(255,255,255,0.09);
+  }
+
+  .dream-card.active {
+    background: rgba(0,204,85,0.15);
+    border-color: #00cc55;
+  }
+
+  .dream-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+  }
+
+  .calc-hint {
+    background: rgba(0,204,85,0.1);
+    border: 1px solid rgba(0,204,85,0.2);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+  }
+
+  .calc-hint strong {
+    color: #00cc55;
+    font-size: 16px;
+  }
+
+  .next-btn {
+    width: 100%;
+    background: #00cc55;
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+  }
+
+  .next-btn:hover { background: #00aa44; }
+  .next-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .back-btn {
+    flex: 1;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 15px;
+    color: rgba(255,255,255,0.6);
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .back-btn:hover {
+    border-color: rgba(255,255,255,0.3);
+    color: white;
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn-row .next-btn {
+    flex: 2;
+    margin-top: 0;
+  }
+
+  .summary {
+    background: #0d150d;
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+
+  .summary-row:last-child { border-bottom: none; }
+
+  .highlight-row {
+    background: rgba(0,204,85,0.08);
+    border-radius: 8px;
+    padding: 8px 12px;
+    border-bottom: none !important;
+    margin-top: 4px;
+  }
+
+  .s-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .s-val {
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+  }
+
+  .s-val.green { color: #00cc55; }
+
+  .success-card { text-align: center; }
+}
