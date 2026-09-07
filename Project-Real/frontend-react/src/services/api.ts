@@ -1,8 +1,8 @@
 import axios from 'axios';
 import type { Expense, Category, Income, AnalyticsData } from '../types';
 
-const API_URL = 'http://localhost:8090/api';
-const TEST_API_URL = 'http://localhost:8090/api/test';
+const API_URL = 'https://expense-tracker-backend.onrender.com/api';
+const TEST_API_URL = 'https://expense-tracker-backend.onrender.com/api/test';
 
 const api = axios.create({
   baseURL: API_URL,
